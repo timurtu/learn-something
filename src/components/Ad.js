@@ -23,3 +23,4 @@ export default class Ad extends React.Component {
     )
   }
 }
+
