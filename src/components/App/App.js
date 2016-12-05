@@ -2,8 +2,9 @@ import React from 'react';
 import { Router, Route, browserHistory, IndexRedirect, Link } from 'react-router'
 import logo from '../../logo.svg';
 import './App.css';
+import Ad from '../Ad'
 
-const SplashPage = () =>
+const Feed = () =>
   <div className="App">
     <div className="App-header">
       <img src={logo} className="App-logo" alt="logo"/>
@@ -14,12 +15,17 @@ const SplashPage = () =>
     </p>
   </div>
 
-const About = () => <h1>About</h1>
+const Create = () =>
+  <div>
+    <h1>Create</h1>
+    <Ad/>
+  </div>
+const NotFound = () => <h1>404 - Page not found</h1>
 
 const Nav = () =>
   <ul>
-    <li><Link to="/splash">Home</Link></li>
-    <li><Link to="/about">About</Link></li>
+    <li><Link to="/feed">Feed</Link></li>
+    <li><Link to="/create">Create</Link></li>
   </ul>
 
 const Layout = ({ children }) =>
@@ -31,9 +37,10 @@ const Layout = ({ children }) =>
 const App = ({ children }) =>
   <Router history={browserHistory}>
     <Route path="/" component={Layout}>
-      <IndexRedirect to="/splash"/>
-      <Route path="/splash" component={SplashPage}/>
-      <Route path="/about" component={About}/>
+      <IndexRedirect to="/feed"/>
+      <Route path="/feed" component={Feed}/>
+      <Route path="/create" component={Create}/>
+      <Route path="*" component={NotFound}/>
     </Route>
   </Router>
 
