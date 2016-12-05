@@ -2,13 +2,12 @@
   "name": "learn-something",
   "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "react-scripts": "0.8.1"
-  },
+  "devDependencies": {},
   "dependencies": {
     "pushstate-server": "^2.1.0",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "react-scripts": "0.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
