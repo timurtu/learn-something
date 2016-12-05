@@ -1,0 +1,8 @@
+{
+  "name": "Learn something",
+  "description": "Get paid to teach",
+  "repository": "https://git.heroku.com/learn-something.git",
+  "logo": "http://www.eatlogos.com/education_logos/png/vector_colourful_book_logo.png",
+  "keywords": ["learn", "something", "new", "every", "day", "get", "paid", "to", "teach"],
+  "image": "heroku/nodejs"
+}
